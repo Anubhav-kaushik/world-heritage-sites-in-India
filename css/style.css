@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    min-height: 20vh;
+    width: 100%;
+    background: var(--header-image, rgb(50, 50, 149));
+    z-index: 10;
+    color: white;
+    padding: 1em;
+    padding-right: 2em;
+    font-size: 2.5rem;
+}
+
+.main-container {
+    width: 100%;
+    min-height: 80vh;
+    background-color: #f2f2f2;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1em;
+}
+
+.site-info-card {
+    width: clamp(300px, 90%, 500px);
+    flex: 1 1 auto;
+    min-height: 200px;
+    margin: auto;
+    background-color: #fff;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-info-card .numbering {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 2em;
+    min-height: 1em;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0.5em 0.5em 0.3em 0.5em;
+    color: white;
+    font-size: 0.6em;
+    text-align: right;
+    border-bottom-right-radius: 0.8em;
+}
+
+.site-info-card .site-image,
+.site-info-card .site-info {
+    width: 50%;
+}
+
+.site-info-card .site-image {
+    max-width: min(400px, 40%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.site-info-card .site-info {
+    padding: 0.25em 0 0.5em 0.5em;
+    background-color: rgba(255, 255, 255, 0.8);
+    flex-grow: 1;
+}
+
+.site-info-card .site-info .site-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.site-info-card .site-info .year-of-recognition {
+    color: rgb(34, 166, 166);
+    margin-bottom: 0.6em;
+    font-weight: bold;
+}
+
+.site-info-card .site-info .state {
+    color: #444;
+    font-size: 1em;
+}
