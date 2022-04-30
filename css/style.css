@@ -13,7 +13,9 @@ body {
 header {
     min-height: 20vh;
     width: 100%;
-    background: var(--header-image, rgb(50, 50, 149));
+    background: linear-gradient(to right, #005beabb 0%, #005beadd 100%),
+    url(../images/chola-temples-illustration.jpg) no-repeat left center;
+    background-size: cover;
     z-index: 10;
     color: white;
     padding: 1em;
