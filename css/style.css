@@ -42,9 +42,9 @@ header {
     min-height: 200px;
     margin: auto;
     background-color: #fff;
-    border: 2px solid cyan;
-    border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(75, 144, 255);
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.5em 0 rgba(75, 144, 255, 0.5);
     display: flex;
     justify-content: flex-start;
     overflow: hidden;
@@ -95,12 +95,12 @@ header {
 }
 
 .site-info-card .site-info .year-of-recognition {
-    color: rgb(34, 166, 166);
-    margin-bottom: 0.6em;
+    color: rgb(75, 144, 255);
+    margin-bottom: 1em;
     font-weight: bold;
 }
 
 .site-info-card .site-info .state {
     color: #444;
-    font-size: 1em;
+    font-size: 1.1em;
 }
