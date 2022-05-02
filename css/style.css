@@ -52,6 +52,7 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 
 .site-info-card .numbering {

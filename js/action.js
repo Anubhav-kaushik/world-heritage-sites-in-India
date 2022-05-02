@@ -1,8 +1,11 @@
-function createInfoCard(numbering, title, year, state, imageUrl) {
+function createInfoCard(numbering, title, year, state, imageUrl, wikiUrl) {
     const infoCard = document.createElement('div');
     infoCard.classList.add('site-info-card');
     infoCard.id = `info-card-${numbering}`;
     infoCard.style.backgroundImage = `url(images/${imageUrl})`;
+    infoCard.addEventListener('click', function () {
+        window.open(wikiUrl, '_blank');
+    });
 
     const imageContainer = document.createElement('div');
     imageContainer.classList.add('site-image');
@@ -47,7 +50,7 @@ function createInfoCards(data, containerSelector) {
     const container = document.querySelector(containerSelector);
     container.innerHTML = '';
     for (let i in data) {
-        const infoCard = createInfoCard(i, data[i].name, data[i].yor, data[i].state, data[i].image);
+        const infoCard = createInfoCard(i, data[i].name, data[i].yor, data[i].state, data[i].image, data[i].wiki);
         addCardToDom(infoCard, containerSelector);
     }
 }
