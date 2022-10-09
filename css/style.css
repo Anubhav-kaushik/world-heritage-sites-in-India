@@ -42,9 +42,9 @@ header {
     min-height: 200px;
     margin: auto;
     background-color: #fff;
-    border: 2px solid rgb(75, 144, 255);
+    border: 2px solid var(--card-border-color, rgb(75, 144, 255));
     border-radius: 0.5em;
-    box-shadow: 0 0 0.5em 0 rgba(75, 144, 255, 0.5);
+    box-shadow: 0 0 0.5em 0 var(--card-shadow-color, rgba(75, 144, 255, 0.5));
     display: flex;
     justify-content: flex-start;
     overflow: hidden;
@@ -55,16 +55,47 @@ header {
     cursor: pointer;
 }
 
+.site-info-card[data-category="cultural"] {
+    --card-border-color: rgb(125, 45, 45);
+    --card-shadow-color: rgba(245, 222, 179, 0.5);
+    --card-numbering-background: rgb(125, 45, 45);
+    --card-numbering-color: white;
+    --card-info-background: rgba(255, 255, 255, 0.8);
+    --card-info-state: #444;
+    --card-info-year: rgb(125, 45, 45);
+}
+
+.site-info-card[data-category="natural"] {
+    --card-border-color: rgb(134, 176, 56);
+    --card-shadow-color: rgba(134, 176, 56, 0.5);
+    --card-numbering-background: rgb(134, 176, 56);
+    --card-numbering-color: white;
+    --card-info-background: rgba(255, 255, 255, 0.8);
+    --card-info-state: #444;
+    --card-info-year: rgb(134, 176, 56);
+}
+
+.site-info-card[data-category="mixed"] {
+    --card-border-color: rgb(75, 144, 255);
+    --card-shadow-color: rgba(75, 144, 255, 0.5);
+    --card-numbering-background: rgb(75, 144, 255);
+    --card-numbering-color: white;
+    --card-info-background: rgba(255, 255, 255, 0.8);
+    --card-info-state: #444;
+    --card-info-year: rgb(75, 144, 255);
+}
+
 .site-info-card .numbering {
     position: absolute;
     top: 0;
     left: 0;
     min-width: 2em;
     min-height: 1em;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: var(--card-numbering-background, rgba(0, 0, 0, 0.8));
     padding: 0.5em 0.5em 0.3em 0.5em;
-    color: white;
+    color: var(--card-numbering-color, white);
     font-size: 0.6em;
+    font-weight: bold;
     text-align: right;
     border-bottom-right-radius: 0.8em;
 }
@@ -83,7 +114,7 @@ header {
 
 .site-info-card .site-info {
     padding: 0.5em 0.5em;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--card-info-background, rgba(255, 255, 255, 0.8));
     /* flex: 1 1 auto; */
     width: fit-content;
     width: min(400px, 60%);
@@ -96,12 +127,12 @@ header {
 }
 
 .site-info-card .site-info .year-of-recognition {
-    color: rgb(75, 144, 255);
+    color: var(--card-info-year, rgb(75, 144, 255));
     margin-bottom: 1em;
     font-weight: bold;
 }
 
 .site-info-card .site-info .state {
-    color: #444;
+    color: var(--card-info-state, #444);
     font-size: 1.1em;
 }
